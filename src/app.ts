@@ -21,7 +21,7 @@ export class App {
 
   private registerRoutes(): void {
     this.app.get('/', (req, res) => res.json({ status: 'ok' }));
-    this.app.use('/api', routes);
+    this.app.use('/api/vast', routes);
     this.app.use(errorHandler);
   }
 

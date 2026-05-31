@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import { vastRoutes } from './vast.routes.js';
+import { userRoutes } from './user.routes.js';
+import { templateRoutes } from './template.routes.js';
 
 const router = Router();
 
-router.use('/vast', vastRoutes);
+router.use('/users', userRoutes);
+router.use('/templates', templateRoutes);
 
 export const routes = router;
