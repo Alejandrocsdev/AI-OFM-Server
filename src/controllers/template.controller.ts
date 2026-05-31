@@ -8,7 +8,7 @@
 //     res.json(data);
 //   });
 
-//   public readonly createTemplate = asyncHandler(async (_req, res) => {
+//   public readonly createTemplate = asyncHandler(async (req, res) => {
 //     const data = await templateService.createTemplate();
 //     res.json(data);
 //   });

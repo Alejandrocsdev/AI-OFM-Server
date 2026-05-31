@@ -2,12 +2,12 @@ import { asyncHandler } from '../middlewares/index.js';
 import { instanceService } from '../services/instance.service.js';
 
 export class InstanceController {
-  public readonly getInstances = asyncHandler(async (_req, res) => {
+  public readonly getInstances = asyncHandler(async (req, res) => {
     const data = await instanceService.getInstances();
     res.json(data);
   });
 
-  public readonly searchInstances = asyncHandler(async (_req, res) => {
+  public readonly searchInstances = asyncHandler(async (req, res) => {
     const data = await instanceService.searchInstances();
     res.json(data);
   });
