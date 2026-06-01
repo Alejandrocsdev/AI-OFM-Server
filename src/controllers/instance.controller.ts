@@ -22,6 +22,18 @@ export class InstanceController {
     res.json(data);
   });
 
+  public readonly startInstance = asyncHandler(async (req, res) => {
+    const instanceId = Number(req.params.instanceId);
+    const data = await instanceService.startInstance(instanceId);
+    res.json(data);
+  });
+
+  public readonly stopInstance = asyncHandler(async (req, res) => {
+    const instanceId = Number(req.params.instanceId);
+    const data = await instanceService.stopInstance(instanceId);
+    res.json(data);
+  });
+
   public readonly rebootInstance = asyncHandler(async (req, res) => {
     const instanceId = Number(req.params.instanceId);
     const data = await instanceService.rebootInstance(instanceId);

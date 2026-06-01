@@ -60,6 +60,20 @@ export class InstanceService {
     return data;
   }
 
+  public async startInstance(instanceId: number): Promise<unknown> {
+    const { data } = await vastCloudApi.put(`/api/v0/instances/start/${instanceId}`,
+      { state: 'running' },
+    );
+    return data;
+  }
+
+  public async stopInstance(instanceId: number): Promise<unknown> {
+    const { data } = await vastCloudApi.put(`/api/v0/instances/stop/${instanceId}`,
+      { state: 'stopped' },
+    );
+    return data;
+  }
+
   public async rebootInstance(instanceId: number): Promise<unknown> {
     const { data } = await vastCloudApi.put(`/api/v0/instances/reboot/${instanceId}`);
     return data;
